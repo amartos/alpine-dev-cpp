@@ -1,5 +1,6 @@
 FROM alpine:edge
 ENV IMAGE_VERSION=20240928
+ENV CMAKE_BUILD_PARALLEL_LEVEL=2
 RUN apk -U upgrade
 RUN <<EOR
     apk add \
