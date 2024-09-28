@@ -1,5 +1,5 @@
 FROM alpine:edge
-ENV IMAGE_VERSION=20240922
+ENV IMAGE_VERSION=20240928
 RUN apk -U upgrade
 RUN <<EOR
     apk add \
@@ -19,6 +19,5 @@ RUN <<EOR
 EOR
 RUN passwd -d -l root
 RUN adduser -D -s /bin/bash git
-USER git
 WORKDIR /home/git
 CMD [ "/bin/bash" ]
