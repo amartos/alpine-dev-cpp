@@ -5,7 +5,9 @@ RUN apk -U upgrade
 RUN <<EOR
     apk add \
         bash git tar rsync zip gzip \
-        build-base cmake gcovr \
+        build-base gcovr \
+        cmake make \
+        meson ninja-build pkgconf py3-pkgconfig \
         doxygen graphviz plantuml \
         clang clang-extra-tools clang-analyzer compiler-rt \
         llvm llvm-dev llvm-gtest llvm-linker-tools \
