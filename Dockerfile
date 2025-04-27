@@ -1,12 +1,12 @@
 FROM alpine:edge
-ENV IMAGE_VERSION=20250413
+ENV IMAGE_VERSION=20250430
 ENV CMAKE_BUILD_PARALLEL_LEVEL=2
 ENV CXX=clang++
 ENV CC=clang
 RUN apk -U upgrade
 RUN <<EOR
     apk add \
-        bash git tar rsync zip gzip \
+        bash python3 perl git tar rsync zip gzip \
         build-base gcovr \
         cmake make \
         meson ninja-build pkgconf py3-pkgconfig \
