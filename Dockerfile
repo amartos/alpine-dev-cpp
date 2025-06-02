@@ -1,8 +1,8 @@
 FROM alpine:edge
 ENV IMAGE_VERSION=20250602
 ENV CMAKE_BUILD_PARALLEL_LEVEL=2
-ENV CXX=ccache clang++
-ENV CC=ccache clang
+ENV CXX="ccache clang++"
+ENV CC="ccache clang"
 RUN apk -U upgrade
 RUN <<EOR
     apk add \
